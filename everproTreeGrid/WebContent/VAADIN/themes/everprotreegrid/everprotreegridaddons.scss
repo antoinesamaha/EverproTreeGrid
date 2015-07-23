@@ -1,0 +1,43 @@
+/* This file is automatically managed and will be overwritten from time to time. */
+/* Do not manually edit this file. */
+
+/* Import and include this mixin into your project theme to include the addon themes */
+@mixin addons {
+	.v-foc-gridtree-node-expanded {
+    /*background-color: blue;*/
+    border: 0px;
+    
+    background-image: url("icons/tree-node-expanded.png");
+    background-repeat:  no-repeat;
+    background-color: transparent;
+    height: 20px;
+    padding-left: 25px;
+    /*margin-left: 30px;*/
+  }
+
+  .v-foc-gridtree-node-collapsed {
+    /*background-color: blue;*/
+    border: 0px;
+    
+    background-image: url("icons/tree-node-collapsed.png");
+    background-repeat:  no-repeat;
+    background-color: transparent;
+    height: 20px;
+    padding-left: 25px;
+    /*margin-left: 30px;*/
+  }
+  
+  .v-foc-gridtree-node-leaf {
+    /*background-color: blue;*/
+    border: 0px;
+    
+    background-image: url("icons/tree-node-leaf.png");
+    background-repeat:  no-repeat;
+    background-color: transparent;
+    height: 20px;
+    padding-left: 25px;
+        /*margin-left: 30px;*/
+  }
+	
+}
+

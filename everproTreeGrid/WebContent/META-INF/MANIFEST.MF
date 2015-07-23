@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Vaadin-Stylesheets: VAADIN/themes/everprotreegrid/everprotreegridaddon
+ s.scss
+Implementation-Title: EverproTreeGrid
+Implementation-Version: 0.1.0
+Vaadin-Widgetsets: me.everpro.everprotreegrid.EverprotreegridWidgetset
+Vaadin-Package-Version: 1
+Class-Path: 
+
