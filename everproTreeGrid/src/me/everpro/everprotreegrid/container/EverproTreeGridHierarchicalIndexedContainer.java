@@ -65,15 +65,37 @@ public class EverproTreeGridHierarchicalIndexedContainer implements Container.In
 		rebuildIndexedArrayList();
 	}
 	
+	private boolean passesAllFilters(Object itemId){
+		boolean passes = true;
+		if(hierachical != null && hierachical instanceof Container.Filterable){
+			Item item = null;
+			Container.Filterable filterable = (Container.Filterable) hierachical;
+			Collection<Filter> filters = filterable.getContainerFilters();
+			Iterator<Filter> iter = filters != null ? filters.iterator() : null;
+			while(iter != null && iter.hasNext() && passes){
+				Filter filter = iter.next();
+				if(filter != null){
+					if(item == null) item = hierachical.getItem(itemId);
+					if(!filter.passesFilter(itemId, item)){
+						passes = false;
+					}
+				}
+			}
+		}
+		return passes; 
+	}
+	
 	private void rebuildIndexedArrayList(Collection itemIds){
 		Iterator iter = itemIds.iterator();
 		while(iter != null && iter.hasNext()){
 			Object itemId = iter.next();
-			indexedArrayList.add(itemId);
-			if(!isCollapsedId(itemId)){
-				Collection childrenItemIds = hierachical.getChildren(itemId);
-				if(childrenItemIds != null){
-					rebuildIndexedArrayList(childrenItemIds);
+			if(passesAllFilters(itemId)){
+				indexedArrayList.add(itemId);
+				if(!isCollapsedId(itemId)){
+					Collection childrenItemIds = hierachical.getChildren(itemId);
+					if(childrenItemIds != null){
+						rebuildIndexedArrayList(childrenItemIds);
+					}
 				}
 			}
 		}
