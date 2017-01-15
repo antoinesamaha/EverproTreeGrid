@@ -5,12 +5,11 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import me.everpro.event.EverproItemSetChangeEvent;
-
 import com.vaadin.data.Container;
 import com.vaadin.data.Item;
 import com.vaadin.data.Property;
-import com.vaadin.data.Container.ItemSetChangeEvent;
+
+import me.everpro.event.EverproItemSetChangeEvent;
 
 public class EverproTreeGridHierarchicalIndexedContainer implements Container.Indexed, Container.ItemSetChangeNotifier {
 
@@ -30,6 +29,10 @@ public class EverproTreeGridHierarchicalIndexedContainer implements Container.In
 						EverproItemSetChangeEvent everproEvent = (EverproItemSetChangeEvent) event;
 						if(everproEvent.getEventID() == EverproItemSetChangeEvent.ADD_EVENT){
 							Object itemId = everproEvent.getItemId();
+                            if(getHierachical() != null){
+								Object parentItemId = getHierachical().getParent(itemId);
+								setCollapsedId(parentItemId, false);
+							}                            
 							setCollapsedId(itemId, false);
 						}
 					}
