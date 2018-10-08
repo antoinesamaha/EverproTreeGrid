@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.focframework</groupId>
   <artifactId>everproTreeGrid</artifactId>
-  <version>1.2.8-SNAPSHOT</version>
+  <version>1.2.8</version>
   <name>everproTreeGrid</name>
   <description>everproTreeGrid</description>
 
@@ -51,6 +51,7 @@
   	<url>https://github.com/FOC-framework/EverproTreeGrid.git</url>  	
 	<connection>scm:git:git://github.com/FOC-framework/EverproTreeGrid.git</connection>  		
 	<developerConnection>scm:git:git@github.com/FOC-framework/EverproTreeGrid.git</developerConnection>
+    <tag>everproTreeGrid-1.2.8</tag>
   </scm>  
   <dependencies>
   	<dependency>
