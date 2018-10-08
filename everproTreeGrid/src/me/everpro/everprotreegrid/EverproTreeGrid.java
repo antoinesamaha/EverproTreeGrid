@@ -4,17 +4,17 @@ import java.util.Locale;
 
 import me.everpro.everprotreegrid.container.EverproTreeGridHierarchicalIndexedContainer;
 
-import com.vaadin.data.Container;
-import com.vaadin.data.Container.Hierarchical;
-import com.vaadin.data.Container.Indexed;
-import com.vaadin.data.Property;
-import com.vaadin.data.Validator.InvalidValueException;
-import com.vaadin.data.util.converter.Converter;
-import com.vaadin.ui.Grid;
-import com.vaadin.ui.TextField;
-import com.vaadin.ui.renderers.ClickableRenderer;
-import com.vaadin.ui.renderers.ClickableRenderer.RendererClickEvent;
-import com.vaadin.ui.renderers.ClickableRenderer.RendererClickListener;
+import com.vaadin.v7.data.Container;
+import com.vaadin.v7.data.Container.Hierarchical;
+import com.vaadin.v7.data.Container.Indexed;
+import com.vaadin.v7.data.Property;
+import com.vaadin.v7.data.Validator.InvalidValueException;
+import com.vaadin.v7.data.util.converter.Converter;
+import com.vaadin.v7.ui.Grid;
+import com.vaadin.v7.ui.TextField;
+import com.vaadin.v7.ui.renderers.ClickableRenderer;
+import com.vaadin.v7.ui.renderers.ClickableRenderer.RendererClickEvent;
+import com.vaadin.v7.ui.renderers.ClickableRenderer.RendererClickListener;
 
 public class EverproTreeGrid extends Grid {
 
@@ -144,11 +144,11 @@ public class EverproTreeGrid extends Grid {
 		EverproTreeButtonRenderer buttonRenderer = new EverproTreeButtonRenderer(listener);
 		col.setRenderer(buttonRenderer, new Converter<String, String>(){
 
-			public String convertToModel(String value, Class<? extends String> targetType, Locale locale) throws com.vaadin.data.util.converter.Converter.ConversionException {
+			public String convertToModel(String value, Class<? extends String> targetType, Locale locale) throws com.vaadin.v7.data.util.converter.Converter.ConversionException {
 				return "Not Implemented";
 			}
 
-			public String convertToPresentation(String value, Class<? extends String> targetType, Locale locale) throws com.vaadin.data.util.converter.Converter.ConversionException {
+			public String convertToPresentation(String value, Class<? extends String> targetType, Locale locale) throws com.vaadin.v7.data.util.converter.Converter.ConversionException {
 //				Object itemId = Integer.valueOf(value);
 				Hierarchical hierarchical = getHierarchicalContainerDataSource();
 				
@@ -285,13 +285,14 @@ public class EverproTreeGrid extends Grid {
 		}
 		
     @Override
-    public void commit() throws com.vaadin.data.Buffered.SourceException, InvalidValueException {
+    public void commit() throws com.vaadin.v7.data.Buffered.SourceException, InvalidValueException {
 			if(refPart != null && !refPart.isEmpty()){
 				Object itemId = convertValueToItemId(refPart);
 				if(itemId != null){
 					setNodeTitleForItemId(itemId, getValue());
 				}
 			}
+			super.commit();
     }
 		
 		public String getRefPart(){

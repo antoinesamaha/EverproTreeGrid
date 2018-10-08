@@ -1,7 +1,7 @@
 package me.everpro.event;
 
-import com.vaadin.data.Container;
-import com.vaadin.data.Container.ItemSetChangeEvent;
+import com.vaadin.v7.data.Container;
+import com.vaadin.v7.data.Container.ItemSetChangeEvent;
 
 public class EverproItemSetChangeEvent implements ItemSetChangeEvent {
 
