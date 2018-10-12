@@ -1,6 +1,6 @@
 package me.everpro.everprotreegrid;
 
-import com.vaadin.v7.ui.renderers.ButtonRenderer;
+import com.vaadin.ui.renderers.ButtonRenderer;
 
 public class EverproTreeButtonRenderer extends ButtonRenderer {
 
@@ -8,11 +8,11 @@ public class EverproTreeButtonRenderer extends ButtonRenderer {
 		super();
 	}
 
-	public EverproTreeButtonRenderer(com.vaadin.v7.ui.renderers.ClickableRenderer.RendererClickListener listener, String nullRepresentation) {
+	public EverproTreeButtonRenderer(com.vaadin.ui.renderers.ClickableRenderer.RendererClickListener listener, String nullRepresentation) {
 		super(listener, nullRepresentation);
 	}
 
-	public EverproTreeButtonRenderer(com.vaadin.v7.ui.renderers.ClickableRenderer.RendererClickListener listener) {
+	public EverproTreeButtonRenderer(com.vaadin.ui.renderers.ClickableRenderer.RendererClickListener listener) {
 		super(listener);
 	}
 

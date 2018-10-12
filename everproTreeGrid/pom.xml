@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.focframework</groupId>
   <artifactId>everproTreeGrid</artifactId>
-  <version>1.2.9-SNAPSHOT</version>
+  <version>1.2.2-SNAPSHOT</version>
   <name>everproTreeGrid</name>
   <description>everproTreeGrid</description>
 
@@ -44,30 +44,24 @@
         	<localCheckout>true</localCheckout>
         	<pushChanges>false</pushChanges>
     	</configuration>
-      </plugin>
+      </plugin>      
     </plugins>
   </build>
-  <scm>  
-  	<url>https://github.com/FOC-framework/EverproTreeGrid.git</url>  	
-	<connection>scm:git:git://github.com/FOC-framework/EverproTreeGrid.git</connection>  		
-	<developerConnection>scm:git:git@github.com/FOC-framework/EverproTreeGrid.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>  
   <dependencies>
   	<dependency>
   		<groupId>com.vaadin</groupId>
   		<artifactId>vaadin-server</artifactId>
-  		<version>8.3.1</version>
+  		<version>7.7.8</version>
   	</dependency>
   	<dependency>
   		<groupId>com.vaadin</groupId>
   		<artifactId>vaadin-push</artifactId>
-  		<version>8.3.1</version>
+  		<version>7.7.8</version>
   	</dependency>
   	<dependency>
   		<groupId>com.vaadin</groupId>
   		<artifactId>vaadin-themes</artifactId>
-  		<version>8.3.1</version>
+  		<version>7.7.8</version>
   	</dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -78,18 +72,20 @@
   	<dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-client-compiled</artifactId>
-      <version>8.3.1</version>
+      <version>7.7.8</version>
       <scope>compile</scope>
     </dependency>
+
   	<dependency>
   		<groupId>com.vaadin</groupId>
   		<artifactId>vaadin-client</artifactId>
-  		<version>8.3.1</version>
+  		<version>7.7.8</version>
   	</dependency>
-  	<dependency>
-		<groupId>com.vaadin</groupId>
-		<artifactId>vaadin-compatibility-server</artifactId>
-		<version>8.3.1</version>
-	</dependency>
   </dependencies>
+  <scm>
+  	<url>https://github.com/FOC-framework/EverproTreeGrid.git</url>  	
+	<connection>scm:git:git://github.com/FOC-framework/EverproTreeGrid.git</connection>  		
+	<developerConnection>scm:git:git@github.com/FOC-framework/EverproTreeGrid.git</developerConnection>    
+    <tag>HEAD</tag>
+  </scm>  
 </project>
