@@ -1,9 +1,5 @@
 package me.everpro.everprotreegrid;
 
-import javax.servlet.annotation.WebServlet;
-
-import com.vaadin.annotations.Theme;
-import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Button;
@@ -13,11 +9,11 @@ import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
 @SuppressWarnings("serial")
-@Theme("everprotreegrid")
+//@Theme("everprotreegrid")
 public class EverproTreeGridUI extends UI {
 
-	@WebServlet(value = "/*", asyncSupported = true)
-	@VaadinServletConfiguration(productionMode = false, ui = EverproTreeGridUI.class, widgetset = "me.everpro.everprotreegrid.EverprotreegridWidgetset")
+//	@WebServlet(value = "/*", asyncSupported = true)
+//	@VaadinServletConfiguration(productionMode = false, ui = EverproTreeGridUI.class, widgetset = "me.everpro.everprotreegrid.EverprotreegridWidgetset")
 	public static class Servlet extends VaadinServlet {
 	}
 
